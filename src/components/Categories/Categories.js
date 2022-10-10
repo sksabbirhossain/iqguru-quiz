@@ -6,7 +6,6 @@ const Categories = ({ category }) => {
   return (
     <div className="w-full p-2 rounded-md shadow-md ">
       <div className="flex gap-3 items-center">
-        {id}
         <img src={logo} alt="category" className="bg-gray-200 w-10" />
         <h5 className="text-sky-500">{name}</h5>
       </div>
@@ -16,7 +15,7 @@ const Categories = ({ category }) => {
         </h5>
         <Link
           to={`/quiz/${id}`}
-          className="bg-sky-500 text-white font-semibold rounded-md  sm:px-1 px-3 py-2"
+          className="bg-sky-500 text-white no-underline font-semibold rounded-md  sm:px-1 px-3 py-2"
         >
           Start Practice
         </Link>
