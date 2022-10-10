@@ -25,7 +25,7 @@ const Quizs = () => {
           return (
             <div key={data.id} className="shadow-md rounded-md px-2 py-1">
               <p>{data.question}</p>
-              <Quiz options={data.options} />
+              <Quiz options={data.options} answer={data.correctAnswer} />
             </div>
           );
         })}
