@@ -1,7 +1,10 @@
 .App {
-  text-align: center;
+  text-align: start;
 }
-
+.active{
+  color: #2b50b6 !important;
+  font-weight: bold !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
