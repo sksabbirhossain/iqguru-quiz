@@ -8,7 +8,7 @@ const Home = () => {
     fetch("https://openapi.programming-hero.com/api/quiz")
       .then((res) => res.json())
       .then((data) => setCategories(data.data));
-  });
+  }, []);
   return (
     <>
       <Banner />
