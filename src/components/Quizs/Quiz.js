@@ -15,7 +15,7 @@ const Quiz = ({ options, answer }) => {
       {options.map((data, index) => (
         <p
           onClick={() => myfun(data)}
-          className="border rounded-md shadow-sm text-sky-800 py-2 px-1 cursor-pointer"
+          className="border rounded-md shadow-sm text-sky-800 hover:bg-sky-100 py-2 px-1 cursor-pointer"
           key={index}
         >
           {data}
