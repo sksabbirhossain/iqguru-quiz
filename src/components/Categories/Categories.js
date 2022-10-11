@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Categories = ({ category }) => {
   const { id, name, logo, total } = category;
@@ -17,7 +19,7 @@ const Categories = ({ category }) => {
           to={`/quiz/${id}`}
           className="bg-sky-500 text-white no-underline font-semibold rounded-md  sm:px-1 px-3 py-2"
         >
-          Start Practice
+          Start Practice <span ><FontAwesomeIcon icon={faArrowRight} /></span>
         </Link>
       </div>
     </div>
