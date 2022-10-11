@@ -1,7 +1,7 @@
 .App {
   text-align: start;
 }
-.active{
+nav .active{
   color: #2b50b6 !important;
   font-weight: bold !important;
 }
