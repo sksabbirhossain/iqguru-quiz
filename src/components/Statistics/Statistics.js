@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
+import CategoryContext from "../../context/CategoryContext";
 import {
   LineChart,
   Line,
@@ -10,16 +11,7 @@ import {
 } from "recharts";
 
 const Statistics = () => {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    fetch("https://openapi.programming-hero.com/api/quiz")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data.data);
-        setCategories(data.data);
-      });
-  }, []);
-
+  const { categories } = useContext(CategoryContext);
   return (
     <div className="sm:m-5 mt-5 sm:mt-0">
       <ResponsiveContainer width="100%" height={400}>

@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
+import CategoryContext from "../../context/CategoryContext";
 import Categories from "../Categories/Categories";
 import Banner from "./Banner";
 
 const Home = () => {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    fetch("https://openapi.programming-hero.com/api/quiz")
-      .then((res) => res.json())
-      .then((data) => setCategories(data.data));
-  }, []);
+  const { categories } = useContext(CategoryContext);
+
   return (
     <>
       <Banner />
